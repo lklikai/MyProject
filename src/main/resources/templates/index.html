@@ -2,36 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
-    <script th:src="@{jqeury/jquery-1.10.2.js}"></script>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
   <h1>Hello World</h1>
-  <span th:text="${name}"></span><br>
-  <span th:text="${name2}"></span><br>
-  <th th:each="li:${list}" th:text="${li}" ></th>
-  <div id="content">
-      <span th:text="用户名"></span>
-      <input id="username" name="用户名" ><br>
-      <button id="btn" onclick="fnClick()" th:text="提交"></button>
-
-  </div>
 
 </body>
 </html>
 <script type="text/javascript">
-    $(document).ready(function(){
-    })
-    function fnClick() {
-       $.ajax({
-            url:"/finduser",
-            type:"post",
-            data:{username:$("#username").val()},
-            datatype:"html",
-            success:function (data) {
-                window.location.href="/finduser?username=超级管理员";
-            }
-       });
-    }
+
 </script>
